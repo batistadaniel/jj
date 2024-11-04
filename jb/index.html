@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>Qual é o Bicho?</title>
+</head>
+<body>
+    <main class="main-pagina">
+        <div class="titulo-pagina">
+            <h1>Qual é o Bicho?</h1>
+        </div>
+
+        <form id="form-pesquisa" class="form-pesquisa">
+            <div class="campo-pesquisa">
+                <input type="tel" id="digito_1" class="digito" maxlength="1" pattern="[0-9]" oninput="apenasUmDigito(event); proximoDigito(this, 'digito_2')" required>
+                <input type="tel" id="digito_2" class="digito" maxlength="1" pattern="[0-9]" oninput="apenasUmDigito(event); proximoDigito(this, 'digito_3')" required>
+                <input type="tel" id="digito_3" class="digito" maxlength="1" pattern="[0-9]" oninput="apenasUmDigito(event); proximoDigito(this, 'digito_4')" required>
+                <input type="tel" id="digito_4" class="digito" maxlength="1" pattern="[0-9]" oninput="apenasUmDigito(event)" required>
+            </div>
+            <button type="submit" class="btn-verificar" onclick="verificaBicho()">Verificar bicho</button>
+        </form>     
+      
+        <p id="resultado"></p>
+        
+        <div class="informacoes">Desenvolvido por Batista @ Todos os direitos reservados</div>
+    </main>
+
+    <script src="src/js/script.js" defer></script>
+</body>
+</html>
